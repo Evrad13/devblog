@@ -11,7 +11,7 @@ def login_user(request):
     form = forms.LoginForm()
     message = ''
     if request.method == 'POST':
-        form = forms.LoginForm(request.method)
+        form = forms.LoginForm(request.POST)
         if form.is_valid():
             user =(
                 authenticate(

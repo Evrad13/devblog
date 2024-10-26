@@ -9,5 +9,6 @@
     {% block content %}{% endblock content %}
     {% if user.is_authenticated %}
         <p>vous ete connecté en tant que {{request.user}}</p><a href="{% url 'logout' %}">Se deconnecter</a>
+    {% endif %}
 </body>
 </html>
